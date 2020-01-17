@@ -2,8 +2,11 @@
 
 require '../libs/vendor/autoload.php';
 require_once '../include/DbConnect.php';
+require_once '../include/util/Helper.php';
 
 $app = new Slim\App();
+
+$message = array();
 
 $app->get('/hello/{name}', function ($request, $response, $args) {
     $name = $args['name'];
